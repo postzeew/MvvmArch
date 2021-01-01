@@ -1,4 +1,4 @@
-package com.postzeew.mvvmarch
+package com.postzeew.mvvmarch.sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -24,3 +24,12 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    // Core
+    appcompatVersion = "1.2.0"
+    coreKtxVersion = "1.3.2"
+
+    // Core UI
+    materialVersion = "1.2.1"
+}
