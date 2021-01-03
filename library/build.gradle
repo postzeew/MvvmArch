@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'com.github.panpf.bintray-publish'
 }
 
 android {
@@ -11,7 +12,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -48,4 +49,18 @@ dependencies {
 
     // Network
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+}
+
+publish {
+    def groupProjectId = 'com.postzeew'
+    def artifactProjectId = 'mvvmarch'
+    def publishVersionId = '1.0.0'
+
+    userOrg = 'postzeew'
+    repoName = 'MvvmArch'
+    groupId = groupProjectId
+    artifactId = artifactProjectId
+    publishVersion = publishVersionId
+    desc = 'MvvmArch.'
+    website = 'https://github.com/postzeew/MvvmArch'
 }
