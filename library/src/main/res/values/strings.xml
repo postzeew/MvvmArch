@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_client_title">Не удалось выполнить запрос (ошибка клиента).</string>
+    <string name="error_client_description">Попробуйте повторить попытку позже.</string>
+
+    <string name="error_server_title">Не удалось выполнить запрос (ошибка сервера).</string>
+    <string name="error_server_description">Попробуйте повторить попытку позже.</string>
+
+    <string name="error_network_unavailable_title">Не удалось подключиться к серверу.</string>
+    <string name="error_network_unavailable_description">Проверьте подключение к сети интернет.</string>
+
+    <string name="error_unknown_title">Что-то пошло не так.</string>
+    <string name="error_unknown_description">Попробуйте повторить попытку позже.</string>
+
+    <string name="retry">Повторить</string>
+</resources>

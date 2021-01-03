@@ -29,6 +29,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -38,7 +41,11 @@ dependencies {
     // Core
     implementation "androidx.appcompat:appcompat:$appcompatVersion"
     implementation "androidx.core:core-ktx:$coreKtxVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinxCoroutinesAndroidVersion"
 
     // Core UI
     implementation "com.google.android.material:material:$materialVersion"
+
+    // Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
 }

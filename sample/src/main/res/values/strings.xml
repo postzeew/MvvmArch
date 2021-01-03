@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MvvmArch</string>
+    <string name="get_time">Get time</string>
 </resources>
