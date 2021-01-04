@@ -27,6 +27,9 @@ interface BaseViewModel {
     suspend fun executeCustomAction(action: suspend () -> Unit, callbacks: EmptyActionCallbacks)
 
     fun onRetryClicked()
+
+    fun onViewCreated()
+    fun onViewRecreated()
 }
 
 abstract class BaseViewModelImpl : ViewModel(), BaseViewModel {
@@ -64,6 +67,14 @@ abstract class BaseViewModelImpl : ViewModel(), BaseViewModel {
     @CallSuper
     override fun onRetryClicked() {
         viewCommands.value = ViewCommand.HideError
+    }
+
+    override fun onViewCreated() {
+
+    }
+
+    override fun onViewRecreated() {
+
     }
 
     private suspend fun <T> executeActionInternal(

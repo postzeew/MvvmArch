@@ -32,6 +32,12 @@ abstract class ViewModelActivity<T : BaseViewModel>(viewModelImplClass: Class<ou
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         subscribeToViewModel()
+
+        if (savedInstanceState == null) {
+            viewModel.onViewCreated()
+        } else {
+            viewModel.onViewRecreated()
+        }
     }
 
     @CallSuper
