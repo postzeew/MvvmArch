@@ -2,13 +2,17 @@ package com.postzeew.mvvmarch.core.presentation
 
 import android.os.Bundle
 import androidx.annotation.CallSuper
-import androidx.appcompat.app.AppCompatActivity
+import androidx.annotation.LayoutRes
+import androidx.fragment.app.Fragment
 
-abstract class ViewModelActivity<T : BaseViewModel>(viewModelImplClass: Class<out BaseViewModelImpl>) : AppCompatActivity() {
+abstract class ViewModelFragment<T : BaseViewModel>(
+    @LayoutRes contentLayoutId: Int,
+    viewModelImplClass: Class<out BaseViewModelImpl>
+) : Fragment(contentLayoutId) {
     private val viewModelViewDelegate by lazy {
         ViewModelViewDelegate<T>(
             viewModelImplClass = viewModelImplClass,
-            rootView = window.decorView.findViewById(android.R.id.content),
+            rootView = requireNotNull(view),
             viewModelStoreOwner = this,
             lifecycleOwner = this
         )
