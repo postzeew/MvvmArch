@@ -2,13 +2,9 @@ package com.postzeew.mvvmarch.core.presentation
 
 import android.os.Bundle
 import androidx.annotation.CallSuper
-import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 
-abstract class ViewModelFragment<T : BaseViewModel>(
-    @LayoutRes contentLayoutId: Int,
-    viewModelImplClass: Class<out BaseViewModelImpl>
-) : Fragment(contentLayoutId) {
+abstract class ViewModelFragment<T : BaseViewModel>(viewModelImplClass: Class<out BaseViewModelImpl>) : Fragment() {
     private val viewModelViewDelegate by lazy {
         ViewModelViewDelegate<T>(
             viewModelImplClass = viewModelImplClass,
