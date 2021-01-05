@@ -11,8 +11,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.0.4"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -54,7 +54,7 @@ dependencies {
 publish {
     def groupProjectId = 'com.postzeew'
     def artifactProjectId = 'mvvmarch'
-    def publishVersionId = '1.0.3'
+    def publishVersionId = '1.0.4'
 
     userOrg = 'postzeew'
     repoName = 'MvvmArch'
