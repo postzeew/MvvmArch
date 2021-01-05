@@ -1,6 +1,7 @@
 package com.postzeew.mvvmarch.core.presentation
 
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.CallSuper
 import androidx.fragment.app.Fragment
 
@@ -19,8 +20,8 @@ abstract class ViewModelFragment<T : BaseViewModel>(viewModelImplClass: Class<ou
     private val screenStateView by lazy { viewModelViewDelegate.screenStateView }
     private val overScreenLoaderView by lazy { viewModelViewDelegate.overScreenLoaderView }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         subscribeToViewModel()
         viewModelViewDelegate.onCreate(savedInstanceState)
     }
